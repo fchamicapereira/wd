@@ -13,7 +13,7 @@ wd
 
 ### oh-my-zsh
 
-`wd` comes bundled with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)!
+`wd` comes bundled with [oh-my-zshell](https://github.com/ohmyzsh/ohmyzsh)!
 
 Just add the plugin in your `~/.zshrc` file:
 
@@ -28,13 +28,10 @@ Run either in terminal:
 
  * `wget --no-check-certificate https://github.com/mfaerevaag/wd/raw/master/install.sh -O - | sh`
 
-##### Arch ([AUR](https://aur.archlinux.org/packages/zsh-plugin-wd-git/))
+##### Arch ([AUR](https://aur.archlinux.org/))
 
     # yaourt -S zsh-plugin-wd-git
 
-#### zplug ([zplug](https://github.com/zplug/zplug))
-
-    # zplug 'mfaerevaag/wd', as:command, use:"wd.sh", hook-load:"wd() { . $ZPLUG_REPOS/mfaerevaag/wd/wd.sh }"
 
 #### Manual
 
@@ -56,7 +53,7 @@ Run either in terminal:
 
 #### Completion
 
-If you're NOT using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) and you want to utilize the zsh-completion feature, you will also need to add the path to your `wd` installation (`~/bin/wd` if you used the automatic installer) to your `fpath`. E.g. in your `~/.zshrc`:
+If you're NOT using [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and you want to utilize the zsh-completion feature, you will also need to add the path to your `wd` installation (`~/bin/wd` if you used the automatic installer) to your `fpath`. E.g. in your `~/.zshrc`:
 
     fpath=(~/path/to/wd $fpath)
 
@@ -82,17 +79,13 @@ Also, you may have to force a rebuild of `zcompdump` by running:
 
         $ wd foo
 
- * You can also warp to a directory within foo, with autocompletion:
-
-        $ wd foo some/inner/path
-
  * You can warp back to previous directory, and so on, with this dot syntax:
 
         $ wd ..
         $ wd ...
 
     This is a wrapper for the zsh `dirs` function.
-    (You might need `setopt AUTO_PUSHD` in your `.zshrc` if you hare not using [oh-my-zshell](https://github.com/robbyrussell/oh-my-zsh)).
+    (You might need `setopt AUTO_PUSHD` in your `.zshrc` if you hare not using [oh-my-zshell](https://github.com/ohmyzsh/ohmyzsh)).
 
  * Remove warp point test point:
 
@@ -141,15 +134,6 @@ Also, you may have to force a rebuild of `zcompdump` by running:
  * Silence all output:
 
         $ wd --quiet <action>
-
-
-### Configuration
-
-You can configure `wd` with the following environment variables:
-
-#### `WD_CONFIG`
-
-Defines the path where warp points get stored. Defaults to `$HOME/.warprc`.
 
 
 ### Testing
