@@ -9,7 +9,7 @@
 # variables
 BIN=$HOME/bin
 DIR=$BIN/wd
-REPO=https://github.com/mfaerevaag/wd.git
+REPO=https://github.com/danielporto/wd.git
 ZSHRC=$HOME/.zshrc
 MANLOC=/usr/share/man/man1
 
